@@ -1,0 +1,32 @@
+
+<script type="text/javascript">
+
+let regex1 = new RegExp(/the/g);
+
+let txt1=`
+Again his gaze completed the circle of the world about him. It was not
+a heartening spectacle. Everywhere was soft sky-line. The hills were all
+low-lying. There were no trees, no shrubs, no grasses - naught but a tre-
+mendous and terrible desolation that sent fear swiftly dawning into his
+eyes.
+`;
+
+console.assert(regex1.global, 'global is not used in this regex');
+console.assert(regex1.ignoreCase, 'ignoreCase is not enabled in this regex');
+console.info('#######################   Matching');
+
+let m;
+while(true) {
+	console.time('matching');
+	m=regex1.exec(txt1)
+	console.timeEnd('matching');
+	console.info('lastIndex: ',regex1.lastIndex);
+	if(!m) {
+		break;
+	}
+}
+
+
+
+
+</script>

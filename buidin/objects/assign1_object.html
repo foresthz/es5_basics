@@ -1,0 +1,23 @@
+
+<script type="text/javascript">
+
+var obj1 = {
+	hello: function() {
+		console.info('hello');
+	}
+}
+
+obj1.hello();
+
+var obj2 = {
+	hi: function() {
+		console.info('hi');
+	},
+	okstr:'okok'
+}
+obj2.hi();
+
+Object.assign(obj1, obj2);
+obj1.hi();
+
+</script>
